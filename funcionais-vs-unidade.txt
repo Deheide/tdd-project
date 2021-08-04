@@ -1,0 +1,1 @@
+Testes unitarios normalmente testam a menor funcionalidade , e comumente devem ser focados em um recurso específico já os testes funcionais verificam o funcionamento correto de um recurso em particular, isto é, eles não se preocupam com "efeitos secundarios" somente com o resultado que fora entregue.
