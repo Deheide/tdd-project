@@ -93,7 +93,7 @@ def test_multiple_users_can_start_lists_at_different_urls(self):
         page_text = self.browser.find_element_by_tag_name('body').text
         self.assertNotIn('1: Estudar testes funcionais', page_text)
         self.assertNotIn('2: Estudar testes de unidade', page_text)
-
+  
         # João inicia uma nova lista
         inputbox = self.browser.find_element_by_id('id_new_item')
         inputbox.send_keys('Comprar leite')
@@ -111,6 +111,6 @@ def test_multiple_users_can_start_lists_at_different_urls(self):
         self.assertIn('Comprar leite', page_text)
 
         # Satisfeitos, ambos vão dormir
-        
+
 if __name__ == '__main__':
     unittest.main()
