@@ -26,7 +26,7 @@ class NewVisitorTest(LiveServerTestCase):
                 if time.time() - start_time > MAX_WAIT:  
                     raise e  
                 time.sleep(0.5)
-                
+                 
     def test_can_start_a_list_for_one_user(self): 
     
         # Maria decidiu utilizar o novo app TODO. Ela entra em sua página principal:
