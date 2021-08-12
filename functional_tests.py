@@ -6,8 +6,8 @@ import time
 
 MAX_WAIT = 5
 
-class NewVisitorTest(StaticLiveServerTestCase):
-
+class FunctionalTest(StaticLiveServerTestCase):
+    
     def setUp(self):
         self.browser = webdriver.Firefox()
 
@@ -26,6 +26,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
                 if time.time() - start_time > MAX_WAIT:  
                     raise e  
                 time.sleep(0.5)
+
+
+class LayoutAndStylingTest(FunctionalTest):
 
     def test_layout_and_styling(self):
         # Edith entra na home page
@@ -51,7 +54,9 @@ class NewVisitorTest(StaticLiveServerTestCase):
             512,
             delta=10
         )
-                 
+        
+class NewVisitorTest(FunctionalTest):
+
     def test_can_start_a_list_for_one_user(self): 
     
         # Maria decidiu utilizar o novo app TODO. Ela entra em sua página principal:
